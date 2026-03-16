@@ -14,7 +14,7 @@ class Car:
 class CarWashStation:
     def __init__(
             self,
-            distance_from_city_center: int,
+            distance_from_city_center: float,
             clean_power: int,
             average_rating: float,
             count_of_ratings: int
@@ -48,18 +48,3 @@ class CarWashStation:
         self.count_of_ratings += 1
         new_average = total_rating / self.count_of_ratings
         self.average_rating = round(new_average, 1)
-
-
-bmw = Car(3, 3, "BMW")
-audi = Car(4, 9, "Audi")
-mercedes = Car(7, 1, "Mercedes")
-
-ws = CarWashStation(6, 8, 3.9, 11)
-
-income = ws.serve_cars([bmw, audi, mercedes])
-
-
-print(income)
-print(bmw.clean_mark)
-print(audi.clean_mark)
-print(mercedes.clean_mark)
